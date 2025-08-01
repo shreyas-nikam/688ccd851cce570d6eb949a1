@@ -11,7 +11,7 @@ from application_pages.utils import (
 
 def run_page2():
     st.title("Method 2: EEPE Monte Carlo Error Estimation")
-    st.markdown("""
+    st.markdown(r"""
     Method 2 calculates the Monte Carlo error of EEPE based on the variance of individual discounted positive exposures $D_j$.
     The formula for the error is:
     $$ \text{error}_{m2}(\text{EEPE}) = \sqrt{\text{var}_{m2}(\text{EEPE})} \times \Phi^{-1}(0.975) $$

@@ -5,7 +5,7 @@ st.sidebar.image("https://www.quantuniversity.com/assets/img/logo5.jpg")
 st.sidebar.divider()
 st.title("QuLab: ECB-Annex Lab")
 st.divider()
-st.markdown("""
+st.markdown(r"""
 This Streamlit application provides an interactive platform for users to understand, implement, and compare two distinct methodologies (Method 1 and Method 2) for estimating the Monte Carlo (MC) error of Expected Positive Exposure (EEPE) in counterparty credit risk. The application allows users to manipulate key simulation parameters and observe their direct impact on error estimates and convergence behavior.
 
 The primary objectives are:

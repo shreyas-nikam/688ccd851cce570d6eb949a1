@@ -12,7 +12,7 @@ from application_pages.utils import (
 
 def run_page1():
     st.title("Method 1: EEPE Monte Carlo Error Estimation")
-    st.markdown("""
+    st.markdown(r"""
     Method 1 calculates the Monte Carlo error of EEPE based on multiple independent Monte Carlo runs.
     The formula for the error is:
     $$ \text{error}_{m1}(\text{EEPE}) = \sqrt{\text{var}_{m1}(\text{EEPE})} \times \text{convAdj}(m) \times \Phi^{-1}(0.975) $$
