@@ -235,7 +235,7 @@ These functions will generate `matplotlib` figures, which will then be displayed
         import numpy as np
         # In Streamlit, this function would return a figure object
         def plot_method1_error(m_values, errors_m1):
-            """Generates a line plot showing error_m1(EEPE) as a function of $m$."""
+            """Generates a line plot showing error_m1(EEPE) as a function of $m$ ."""
             fig, ax = plt.subplots() # Create a figure and axes
             ax.plot(m_values, errors_m1)
             ax.set_xlabel("Number of MC Runs ($m$)")
