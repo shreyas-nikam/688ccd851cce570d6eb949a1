@@ -1,1 +1,32 @@
-# Starter Python file
+
+import streamlit as st
+st.set_page_config(page_title="QuLab", layout="wide")
+st.sidebar.image("https://www.quantuniversity.com/assets/img/logo5.jpg")
+st.sidebar.divider()
+st.title("QuLab: ECB-Annex Lab")
+st.divider()
+st.markdown("""
+This Streamlit application provides an interactive platform for users to understand, implement, and compare two distinct methodologies (Method 1 and Method 2) for estimating the Monte Carlo (MC) error of Expected Positive Exposure (EEPE) in counterparty credit risk. The application allows users to manipulate key simulation parameters and observe their direct impact on error estimates and convergence behavior.
+
+The primary objectives are:
+*   To enable users to understand and implement the calculations for $	ext{error}_{m1}(	ext{EEPE})$ and $	ext{error}_{m2}(	ext{EEPE})$.
+*   To visualize the relationship between simulation parameters (number of MC runs $m$, number of scenarios $N$) and the calculated Monte Carlo errors.
+*   To compare the error magnitudes derived from both Method 1 and Method 2.
+*   To illustrate the impact of the convergence adjustment factor $	ext{convAdj}(m)$ on Method 1's error.
+*   To provide an intuitive, interactive experience for exploring the sensitivities of EEPE error estimation.
+
+**Business Value:**
+Understanding and accurately calculating Monte Carlo error in EEPE is critical for regulatory compliance and sound risk management in financial institutions. This application offers a hands-on tool to explore different methodologies and their sensitivities, enabling better model validation, risk assessment, and resource allocation for computationally intensive simulations.
+""")
+# Your code starts here
+page = st.sidebar.selectbox(label="Navigation", options=["Method 1", "Method 2", "Comparison"])
+if page == "Method 1":
+    from application_pages.page1 import run_page1
+    run_page1()
+elif page == "Method 2":
+    from application_pages.page2 import run_page2
+    run_page2()
+elif page == "Comparison":
+    from application_pages.page3 import run_page3
+    run_page3()
+# Your code ends
