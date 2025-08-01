@@ -281,22 +281,3 @@ The notebook will generate dynamic plots based on user interactions:
 *   **Synthetic Data Representativeness:** The synthetic data generated for this demonstration is intended to illustrate the mechanics of the formulas. It is assumed that this simulated data sufficiently approximates real-world EEPE/exposure distributions for pedagogical purposes.
 *   **Method 1 EEPE^k:** For Method 1, each $\text{EEPE}^k$ value is treated as an independent outcome from a full MC run, without explicitly simulating the $N$ scenarios within each of those $m$ runs.
 *   **Method 2 $D_j$ Values:** For Method 2, the $D_j$ values are treated as independent outcomes representing the aggregated exposure for each scenario $j$, simplifying the complex derivation from individual exposures $E_j(t_k)$.
-
-### 4.2. Constraints
-
-*   **Open-Source Python Libraries:** Only libraries available on PyPI and explicitly mentioned in Section 3.2 are permitted.
-*   **No Deployment Details:** This specification is strictly for the Jupyter Notebook content and functionality. It does not cover deployment, hosting, or integration with external platforms.
-*   **No Python Code in Specification:** This document provides conceptual algorithms and function descriptions, not executable Python code.
-*   **Narrative and Comments:** All major steps in the notebook's code and analysis will be accompanied by descriptive Markdown cells explaining "what" is happening and "why", along with inline code comments.
-*   **LaTeX Formatting:** All mathematical content, especially formulas and equations, must adhere strictly to the specified LaTeX formatting rules: `$$...$$` for display equations and `$...$` for inline equations.
-
-### 4.3. Customization and Exploration Instructions for Users
-
-*   **Parameter Manipulation:** Users are strongly encouraged to actively interact with the sliders and dropdowns provided. Experimenting with different values for $m$, $N$, synthetic mean, and volatility will directly demonstrate their impact on the calculated errors and observed convergence patterns.
-*   **Code Exploration:** Learners can inspect the Python code cells to understand how the synthetic data is generated and how each mathematical formula is translated into code.
-*   **Theoretical Deep Dive:** Refer back to the "Mathematical and Theoretical Foundations" sections to reinforce the understanding of the formulas and the rationale behind each method.
-*   **Further Enhancements (Self-Study):**
-    *   Consider how more realistic synthetic data generation (e.g., correlated exposures, specific distributions) might affect the results.
-    *   Explore how to implement the aggregation across netting sets (Section 2.5) if provided with hypothetical multi-netting set data.
-    *   Investigate the impact of different confidence levels (e.g., 90% or 99%) on the error calculation.
-
